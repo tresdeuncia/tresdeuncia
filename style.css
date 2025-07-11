@@ -13,10 +13,25 @@ html, body {
     font-family: sans-serif;
 }
 
+/* Fondo con imagen y capa semitransparente encima */
 body {
     background: url(imagenes/fondo.jpeg) no-repeat center center fixed;
     background-size: cover;
     color: #333;
+    position: relative;
+    z-index: 0;
+}
+
+/* Fondo transparente encima de la imagen */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* negro con 40% opacidad */
+    z-index: -1;
 }
 
 /* =========================
@@ -370,28 +385,21 @@ footer {
 
     .contenedor1-footer {
         flex-direction: column;
-    }
-
-
-    .contenedor1-footer
-    {
-        flex-direction: column;
         border: none;
     }
-    .content-foo
-    {
+
+    .content-foo {
         text-align: center;
         margin-bottom: 20px;
     }
-    .content-foo h4 
-    {
+
+    .content-foo h4 {
         border: none;
     }
-    .content-foo p 
-    {
+
+    .content-foo p {
         color: #ccc;
         border-bottom: 1px solid #f2f2f2;
         padding-bottom: 20px;
     }
-
-}                                      
+}
