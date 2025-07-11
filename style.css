@@ -109,6 +109,25 @@ header {
     text-align: center;
 }
 
+/* Ajuste para h4 y p dentro de .ima */
+.ima h4,
+.ima p {
+    width: 220px;                       /* ancho fijo */
+    height: 80px;                      /* alto fijo */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo negro semitransparente */
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    overflow: hidden;                  /* oculta texto extra */
+    text-overflow: ellipsis;           /* puntos suspensivos si se corta */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;             /* máximo 4 líneas */
+    -webkit-box-orient: vertical;
+    line-height: 1.2em;
+}
+
 .i1 {
     height: 250px;
     width: 100%;
@@ -154,6 +173,9 @@ header {
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .titulo {
@@ -323,6 +345,9 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .content-foo {
@@ -334,3 +359,61 @@ footer {
     margin-bottom: 10px;
     font-weight: 600;
 }
+
+/* =========================
+   RESPONSIVE Y MENÚ MÓVIL
+========================= */
+
+/* Mostrar menú hamburguesa solo en móviles */
+@media (max-width: 768px) {
+  .menu,
+  .menu1 {
+    display: block;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 1101;
+    cursor: pointer;
+  }
+
+  .menu1 {
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+  }
+
+  .main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  #check:checked ~ header .main {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .main a {
+    padding: 15px 0;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #4bc4cc;
+    text-align: left;
+  }
+}
+
