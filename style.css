@@ -37,6 +37,7 @@ body::before {
 /* =========================
    HEADER Y NAVEGACIÓN
 ========================= */
+
 header {
     height: 100px;
     padding: 0 50px;
@@ -108,15 +109,6 @@ header {
     text-align: center;
 }
 
-.ima p {
-    max-height: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    color: #ddd;
-    margin-bottom: 10px;
-}
-
 .i1 {
     height: 250px;
     width: 100%;
@@ -128,6 +120,13 @@ header {
     font-size: 20px;
     margin: 10px 0;
     color: #4bc4cc;
+}
+
+.ima p {
+    margin: 0 10px 10px;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button {
@@ -148,6 +147,7 @@ header {
 /* =========================
    SECCIÓN SABER MÁS
 ========================= */
+
 .contenedor1 {
     padding: 60px 0;
     width: 90%;
@@ -207,6 +207,7 @@ header {
 /* =========================
    GALERÍA MORAT
 ========================= */
+
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -258,39 +259,51 @@ header {
 }
 
 /* =========================
-   MÁS ARTISTAS
+   MÁS ARTISTAS (LISTA CON AUDIOS)
 ========================= */
-.servicecon {
+
+.lista-artistas {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 30px;
 }
 
-.artistas {
-    width: 30%;
-    text-align: center;
-}
-
-.artistas img {
-    width: 100%;
+.artista-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
+    padding: 15px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.artistas h3 {
-    margin-top: 10px;
+.artista-item img {
+    width: 150px;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 
-.artistas p {
+.info-audio {
+    flex: 1;
+    color: #fff;
+}
+
+.info-audio h3 {
+    margin: 0 0 5px;
+}
+
+.info-audio p {
+    margin: 0 0 10px;
     font-weight: 300;
-    margin-bottom: 10px;
 }
 
-.artistas audio {
+.info-audio audio {
     width: 100%;
-    max-width: 250px;
-    margin-top: 10px;
-    outline: none;
+    max-width: 300px;
     border-radius: 5px;
 }
 
@@ -298,121 +311,26 @@ header {
    FOOTER
 ========================= */
 footer {
-    background: #414141;
-    padding: 60px 0 30px;
+    padding: 20px 0;
+    background: #222;
+    color: white;
 }
 
 .contenedor1-footer {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     width: 90%;
+    max-width: 1000px;
     margin: auto;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .content-foo {
+    margin: 10px;
     text-align: center;
-    margin-bottom: 20px;
-    flex: 1;
 }
 
 .content-foo h4 {
-    color: #fff;
-    border-bottom: 3px solid #af20d3;
-    padding-bottom: 5px;
     margin-bottom: 10px;
-}
-
-.content-foo p {
-    color: #ccc;
-}
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-@media (max-width: 768px) {
-    .menu, .menu1 {
-        display: block;
-    }
-
-    .main {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background: #4a2e6c;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-        transition: 0.8s ease;
-        z-index: 999;
-    }
-
-    .main a {
-        display: block;
-        padding: 20px;
-    }
-
-    .menu1 {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-
-    #check:checked ~ .main {
-        right: 0;
-    }
-
-    .contenedor1-sm,
-    .servicecon {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imagenport {
-        width: 45%;
-    }
-
-    .artistas {
-        width: 90%;
-    }
-}
-
-@media (max-width: 500px) {
-    .imagen_sm,
-    .i1,
-    .imagenport {
-        width: 95%;
-    }
-
-    .galeria {
-        gap: 10px;
-    }
-
-    .imagenport {
-        width: 100%;
-    }
-
-    .contenedor1-footer {
-        flex-direction: column;
-        border: none;
-    }
-
-    .content-foo {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .content-foo h4 {
-        border: none;
-    }
-
-    .content-foo p {
-        color: #ccc;
-        border-bottom: 1px solid #f2f2f2;
-        padding-bottom: 20px;
-    }
+    font-weight: 600;
 }
