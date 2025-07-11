@@ -30,14 +30,13 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* negro con 40% opacidad */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
 /* =========================
    HEADER Y NAVEGACIÓN
 ========================= */
-
 header {
     height: 100px;
     padding: 0 50px;
@@ -109,6 +108,15 @@ header {
     text-align: center;
 }
 
+.ima p {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
 .i1 {
     height: 250px;
     width: 100%;
@@ -140,7 +148,6 @@ header {
 /* =========================
    SECCIÓN SABER MÁS
 ========================= */
-
 .contenedor1 {
     padding: 60px 0;
     width: 90%;
@@ -200,7 +207,6 @@ header {
 /* =========================
    GALERÍA MORAT
 ========================= */
-
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -254,7 +260,6 @@ header {
 /* =========================
    MÁS ARTISTAS
 ========================= */
-
 .servicecon {
     display: flex;
     justify-content: space-between;
@@ -278,12 +283,20 @@ header {
 
 .artistas p {
     font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.artistas audio {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 5px;
 }
 
 /* =========================
    FOOTER
 ========================= */
-
 footer {
     background: #414141;
     padding: 60px 0 30px;
@@ -319,7 +332,6 @@ footer {
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
-
 @media (max-width: 768px) {
     .menu, .menu1 {
         display: block;
