@@ -1,0 +1,129 @@
+/* Fuente y cuerpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #e6ecf3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.encabezado {
+  background: linear-gradient(to right, #2e5c9a, #4a77b3);
+  color: white;
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.encabezado h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Contenedor principal */
+.contenedor-biografia {
+  max-width: 800px;
+  margin: -30px auto 30px;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+/* Foto */
+.foto-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones */
+section {
+  margin-top: 30px;
+}
+
+h2 {
+  color: #2e5c9a;
+  font-size: 20px;
+  border-bottom: 2px solid #cfd8e2;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Botón */
+.boton-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2e5c9a;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(46, 92, 154, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1f3b57;
+  box-shadow: 0 6px 15px rgba(31, 59, 87, 0.6);
+}
+
+/* Pie de página */
+.pie {
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 10px;
+  background-color: #2e5c9a;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contenedor-biografia {
+    padding: 25px 15px;
+    margin: 0 10px 30px;
+  }
+
+  .encabezado h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+}
