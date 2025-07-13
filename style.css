@@ -151,7 +151,7 @@ header {
 .button {
     display: inline-block;
     text-decoration: none;
-    color: #553374;
+    color: #a9dd76;
     padding: 10px 30px;
     border: 3px solid #6cc091;
     margin-top: 15px;
@@ -159,7 +159,7 @@ header {
 }
 
 .button:hover {
-    background-color: #6cc091;
+    background-color: #6c6fc0;
     color: aliceblue;
 }
 
@@ -178,10 +178,11 @@ header {
 }
 
 .titulo {
-    color: rgb(91, 10, 10);
+    color: rgba(255, 255, 255, 0.686);
     font-size: 30px;
     text-align: center;
     margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .contenedor1-sm {
