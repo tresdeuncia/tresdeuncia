@@ -281,6 +281,56 @@ header {
 /* =========================
    MÁS ARTISTAS (LISTA CON AUDIOS)
 ========================= */
+.music-list .cards-music {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card-music {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.card-music:hover {
+  transform: translateY(-10px);
+}
+
+.card-music img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.music-info {
+  padding: 15px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.music-info h3 {
+  margin-bottom: 6px;
+  font-size: 22px;
+  color: #6cc091;
+}
+
+.music-info p {
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
+.music-info audio {
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+  background-color: #222;
+}
+
 .lista-artistas {
     list-style: none;
     padding: 0;
